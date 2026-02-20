@@ -1,0 +1,799 @@
+ /* --- CSS Variables for Theme --- */
+ :root {
+     --primary-color: #0a2e36;
+     /* Deep Teal/Navy */
+     --secondary-color: #cfa863;
+     /* Muted Gold */
+     --accent-color: #17a2b8;
+     --bg-light: #f8f9fa;
+     --text-dark: #333;
+     --font-main: 'Poppins', sans-serif;
+     --font-heading: 'Playfair Display', serif;
+ }
+
+ body {
+     font-family: var(--font-main);
+     color: var(--text-dark);
+     background-color: #fff;
+     overflow-x: hidden;
+ }
+
+ /* --- Navbar Styling --- */
+ .navbar {
+     background-color: var(--primary-color) !important;
+     padding: 15px 0;
+     transition: all 0.3s ease;
+ }
+
+ .navbar-brand {
+     font-family: var(--font-heading);
+     font-size: 1.8rem;
+     color: #fff !important;
+     font-weight: 700;
+     letter-spacing: 1px;
+ }
+
+ .navbar-brand span {
+     color: var(--secondary-color);
+ }
+
+ .nav-link {
+     color: rgba(255, 255, 255, 0.8) !important;
+     font-weight: 500;
+     margin: 0 10px;
+     transition: 0.3s;
+ }
+
+ .nav-link:hover,
+ .nav-link.active {
+     color: var(--secondary-color) !important;
+ }
+
+ .btn-custom {
+     background-color: var(--secondary-color);
+     color: var(--primary-color);
+     border: none;
+     padding: 8px 20px;
+     font-weight: 600;
+     border-radius: 50px;
+     transition: 0.3s;
+ }
+
+ .btn-custom:hover {
+     background-color: #fff;
+     color: var(--primary-color);
+     transform: translateY(-2px);
+ }
+
+ /* --- Hero Swiper Section --- */
+ .hero-swiper {
+     width: 100%;
+     height: 100vh;
+     position: relative;
+ }
+
+ .swiper-slide img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     filter: brightness(0.5);
+     /* Dark overlay for text readability */
+ }
+
+ .hero-content {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     z-index: 10;
+     color: #fff;
+     width: 80%;
+     padding-top: 400px;
+ }
+
+ .hero-content h1 {
+     font-family: var(--font-heading);
+     font-size: 4rem;
+     margin-bottom: 20px;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ .hero-content p {
+     font-size: 1.2rem;
+     margin-bottom: 30px;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+ }
+
+ /* --- Floating Booking Form --- */
+ .booking-form-container {
+     position: absolute;
+     bottom: -60px;
+     /* Floats halfway out of the hero */
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 20;
+     width: 90%;
+     max-width: 1100px;
+ }
+
+ .booking-card {
+     background: #fff;
+     border-radius: 15px;
+     padding: 30px;
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+ }
+
+ .booking-card h4 {
+     color: var(--primary-color);
+     margin-bottom: 20px;
+     font-weight: 600;
+ }
+
+ .form-control,
+ .form-select {
+     border: 1px solid #e0e0e0;
+     padding: 12px;
+     border-radius: 8px;
+ }
+
+ .form-control:focus,
+ .form-select:focus {
+     box-shadow: none;
+     border-color: var(--secondary-color);
+ }
+
+ .btn-book {
+     background-color: var(--primary-color);
+     color: #fff;
+     padding: 12px 30px;
+     border-radius: 8px;
+     font-weight: 600;
+     width: 100%;
+     border: none;
+ }
+
+ .btn-book:hover {
+     background-color: #0c3d47;
+     color: var(--secondary-color);
+ }
+
+ /* --- General Section Styling --- */
+ .section-padding {
+     padding: 80px 0;
+ }
+
+ .section-title {
+     text-align: center;
+     margin-bottom: 50px;
+ }
+
+ .section-title h2 {
+     font-family: var(--font-heading);
+     font-size: 2.8rem;
+     color: var(--primary-color);
+     margin-bottom: 10px;
+ }
+
+ .section-title .line {
+     width: 80px;
+     height: 3px;
+     background-color: var(--secondary-color);
+     margin: 0 auto;
+ }
+
+ /* --- Room Cards --- */
+ .room-card {
+     border: none;
+     border-radius: 15px;
+     overflow: hidden;
+     transition: 0.4s all ease;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+     margin-bottom: 30px;
+ }
+
+ .room-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+ }
+
+ .room-card img {
+     height: 220px;
+     object-fit: cover;
+     transition: 0.4s;
+ }
+
+ .room-card:hover img {
+     transform: scale(1.05);
+ }
+
+ .card-img-overlay {
+     position: absolute;
+     top: 15px;
+     right: 15px;
+     background: rgba(255, 255, 255, 0.24);
+     padding: 5px 15px;
+     border-radius: 50px;
+     font-weight: 600;
+     color: var(--primary-color);
+ }
+
+ .card-body h5 {
+     font-weight: 700;
+     color: var(--primary-color);
+ }
+
+ .badge-facility {
+     background-color: #f0f0f0;
+     color: #555;
+     margin-right: 5px;
+     font-weight: 400;
+     padding: 5px 10px;
+     border-radius: 4px;
+ }
+
+ /* --- Facilities Section --- */
+ .facility-box {
+     background: #fff;
+     border-radius: 12px;
+     padding: 40px 20px;
+     text-align: center;
+     transition: 0.3s;
+     border: 1px solid #eee;
+     height: 100%;
+ }
+
+ .facility-box:hover {
+     border-color: var(--secondary-color);
+     transform: translateY(-5px);
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+ }
+
+ .facility-box i {
+     font-size: 2.5rem;
+     color: var(--secondary-color);
+     margin-bottom: 15px;
+ }
+
+ /* --- Testimonials --- */
+ .testimonial-card {
+     background: var(--primary-color);
+     color: #fff;
+     padding: 40px;
+     border-radius: 15px;
+     position: relative;
+ }
+
+ .testimonial-card::before {
+     content: '"';
+     font-family: serif;
+     font-size: 100px;
+     position: absolute;
+     top: -10px;
+     left: 20px;
+     opacity: 0.1;
+ }
+
+ .swiper-testimonials {
+     padding-bottom: 50px;
+ }
+
+ /* --- Footer --- */
+ .footer {
+     background-color: var(--primary-color);
+     color: rgba(255, 255, 255, 0.8);
+     padding-top: 80px;
+ }
+
+ .footer h5 {
+     color: #fff;
+     margin-bottom: 20px;
+ }
+
+ .footer a {
+     color: rgba(255, 255, 255, 0.6);
+     text-decoration: none;
+     transition: 0.3s;
+ }
+
+ .footer a:hover {
+     color: var(--secondary-color);
+ }
+
+ .footer-bottom {
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+     padding: 20px 0;
+     margin-top: 40px;
+     text-align: center;
+     font-size: 0.9rem;
+ }
+
+ /* Mobile Adjustments */
+ @media (max-width: 768px) {
+     .hero-content h1 {
+         font-size: 2.5rem;
+     }
+
+     .booking-form-container {
+         position: relative;
+         bottom: 0;
+         margin-top: -60px;
+     }
+
+     .hero-swiper {
+         height: 60vh;
+     }
+ }
+
+ .a-style:hover {
+     background-color: #cfa863;
+     color: #0c3d47;
+ }
+
+ /* 1. Parallax Background Wrapper */
+ .review-section-wrapper {
+     position: relative;
+     background-image: url('https://placehold.co/1920x1080/1a2530/333333?text=Guests+Reviews');
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     /* Creates the parallax effect */
+     padding: 100px 0;
+     overflow: hidden;
+ }
+
+ /* Dark Overlay for Text Readability */
+ .review-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(10, 46, 54, 0.85);
+     /* Dark Teal Overlay */
+ }
+
+ /* 2. Card Styling */
+ .review-card {
+     background: #fff;
+     padding: 40px 30px;
+     border-radius: 20px;
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+     position: relative;
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     height: 100%;
+ }
+
+ /* Hover Lift Effect */
+ .review-card:hover {
+     transform: translateY(-15px) scale(1.02);
+     box-shadow: 0 25px 60px rgba(207, 168, 99, 0.3);
+     /* Gold glow */
+ }
+
+ /* 3. Quote Icon Styling */
+ .quote-icon {
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     font-size: 4rem;
+     color: rgba(207, 168, 99, 0.15);
+     /* Faint Gold */
+     line-height: 1;
+     transition: 0.3s;
+ }
+
+ .review-card:hover .quote-icon {
+     color: rgba(207, 168, 99, 0.3);
+     /* Darken on hover */
+     transform: rotate(10deg);
+ }
+
+ /* 4. Stars & Text */
+ .stars i {
+     color: #ffc107;
+     font-size: 1.1rem;
+     margin-right: 2px;
+ }
+
+ .review-text {
+     font-family: 'Poppins', sans-serif;
+     font-size: 1rem;
+     color: #555;
+     line-height: 1.8;
+     font-style: italic;
+ }
+
+ /* 5. Profile Image */
+ .reviewer-profile img {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     border: 3px solid var(--secondary-color);
+ }
+
+ /* 6. Swiper Pagination (Bullets) */
+ .swiper-pagination-bullet {
+     background: #fff;
+     opacity: 0.5;
+     width: 12px;
+     height: 12px;
+ }
+
+ .swiper-pagination-bullet-active {
+     background: var(--secondary-color) !important;
+     opacity: 1;
+     transform: scale(1.2);
+ }
+
+ /* 7. Swiper 3D Effect Styles */
+ .swiper-slide {
+     opacity: 0.4;
+     /* Dim inactive slides */
+     transition: opacity 0.3s ease;
+ }
+
+ .swiper-slide-active {
+     opacity: 1;
+     /* Highlight active slide */
+ }
+
+ /* 1. Wrapper & Background Shapes */
+ .about-section-wrapper {
+     padding: 100px 0;
+     background-color: #f8f9fa;
+     position: relative;
+     z-index: 1;
+ }
+
+ .about-bg-shape {
+     position: absolute;
+     border-radius: 50%;
+     z-index: -1;
+     opacity: 0.1;
+ }
+
+ .shape-1 {
+     width: 400px;
+     height: 400px;
+     background: var(--secondary-color);
+     top: -100px;
+     left: -100px;
+ }
+
+ .shape-2 {
+     width: 300px;
+     height: 300px;
+     background: var(--primary-color);
+     bottom: -50px;
+     right: -50px;
+ }
+
+ /* 2. Image Wrapper & Hover Effects */
+ .about-image-wrapper {
+     position: relative;
+     max-width: 500px;
+     margin: 0 auto;
+ }
+
+ .about-main-img {
+     width: 100%;
+     border-radius: 20px;
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+     transition: transform 0.5s ease;
+     border: 5px solid #fff;
+ }
+
+ .about-image-wrapper:hover .about-main-img {
+     transform: scale(1.03) rotate(1deg);
+ }
+
+ /* Gold Decorative Border Behind Image */
+ .about-image-wrapper::before {
+     content: '';
+     position: absolute;
+     top: 20px;
+     left: 20px;
+     width: 100%;
+     height: 100%;
+     border: 3px solid var(--secondary-color);
+     border-radius: 20px;
+     z-index: -1;
+     transition: all 0.5s ease;
+ }
+
+ .about-image-wrapper:hover::before {
+     top: 15px;
+     left: 15px;
+ }
+
+ /* Floating Badge */
+ .experience-badge {
+     position: absolute;
+     bottom: 30px;
+     right: -20px;
+     background: var(--primary-color);
+     color: #fff;
+     padding: 20px;
+     border-radius: 15px;
+     text-align: center;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+     animation: float 3s ease-in-out infinite;
+ }
+
+ .experience-badge h3 {
+     color: var(--secondary-color);
+     font-size: 2.5rem;
+     font-weight: 700;
+     margin: 0;
+     line-height: 1;
+ }
+
+ .experience-badge p {
+     margin: 0;
+     font-size: 0.8rem;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ @keyframes float {
+     0% {
+         transform: translateY(0px);
+     }
+
+     50% {
+         transform: translateY(-10px);
+     }
+
+     100% {
+         transform: translateY(0px);
+     }
+ }
+
+ /* 3. Content Styling */
+ .section-subtitle {
+     color: var(--secondary-color);
+     font-weight: 600;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     font-size: 0.9rem;
+     display: block;
+     margin-bottom: 10px;
+ }
+
+ .section-title-about {
+     font-family: 'Playfair Display', serif;
+     font-size: 3rem;
+     color: var(--primary-color);
+     margin-bottom: 20px;
+ }
+
+ .lead-text {
+     font-weight: 600;
+     color: #555;
+     font-size: 1.1rem;
+     margin-bottom: 15px;
+ }
+
+ .description-text {
+     color: #666;
+     line-height: 1.8;
+ }
+
+ /* 4. Stats Cards */
+ .stat-card-about {
+     background: #fff;
+     padding: 20px 10px;
+     border-radius: 15px;
+     text-align: center;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+     transition: 0.3s;
+     border-bottom: 3px solid transparent;
+ }
+
+ .stat-card-about:hover {
+     transform: translateY(-10px);
+     border-bottom-color: var(--secondary-color);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .stat-card-about i {
+     font-size: 1.8rem;
+     color: var(--secondary-color);
+     margin-bottom: 10px;
+ }
+
+ .stat-card-about h3 {
+     font-size: 2rem;
+     color: var(--primary-color);
+     margin: 0;
+     font-weight: 700;
+ }
+
+ .stat-card-about p {
+     margin: 0;
+     color: #777;
+     font-size: 0.9rem;
+ }
+
+ /* Responsive Fixes */
+ @media (max-width: 768px) {
+     .section-title-about {
+         font-size: 2.2rem;
+     }
+
+     .experience-badge {
+         right: 0;
+         bottom: 10px;
+         padding: 15px;
+     }
+
+     .about-image-wrapper::before {
+         display: none;
+     }
+ }
+
+ :root {
+     --primary-color: #0a2e36;
+     --secondary-color: #cfa863;
+ }
+
+ /* --- Review Section Styles --- */
+ .review-section-wrapper {
+     position: relative;
+     background-image: url('https://placehold.co/1920x1080/1a2530/333333?text=Guests+Reviews');
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     padding: 100px 0;
+     overflow: hidden;
+ }
+
+ .review-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(10, 46, 54, 0.9);
+ }
+
+ /* Review Card */
+ .review-card {
+     background: #fff;
+     padding: 40px 30px;
+     border-radius: 20px;
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+     position: relative;
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     height: 100%;
+ }
+
+ .review-card:hover {
+     transform: translateY(-15px) scale(1.02);
+     box-shadow: 0 25px 60px rgba(207, 168, 99, 0.3);
+ }
+
+ .quote-icon {
+     position: absolute;
+     top: 20px;
+     right: 30px;
+     font-size: 4rem;
+     color: rgba(207, 168, 99, 0.15);
+     line-height: 1;
+     transition: 0.3s;
+ }
+
+ .review-card:hover .quote-icon {
+     color: rgba(207, 168, 99, 0.3);
+     transform: rotate(10deg);
+ }
+
+ .stars i {
+     color: #ffc107;
+     font-size: 1.1rem;
+     margin-right: 2px;
+ }
+
+ .review-text {
+     font-family: 'Poppins', sans-serif;
+     font-size: 1rem;
+     color: #555;
+     line-height: 1.8;
+     font-style: italic;
+ }
+
+ .reviewer-profile img {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     border: 3px solid var(--secondary-color);
+ }
+
+ /* Swiper Pagination */
+ .swiper-pagination-bullet {
+     background: #fff;
+     opacity: 0.5;
+     width: 12px;
+     height: 12px;
+ }
+
+ .swiper-pagination-bullet-active {
+     background: var(--secondary-color) !important;
+     opacity: 1;
+     transform: scale(1.2);
+ }
+
+ .swiper-slide {
+     opacity: 0.4;
+     transition: opacity 0.3s ease;
+ }
+
+ .swiper-slide-active {
+     opacity: 1;
+ }
+
+ /* --- Write Review Button --- */
+ .btn-write-review {
+     background: var(--secondary-color);
+     color: var(--primary-color);
+     border: none;
+     padding: 15px 35px;
+     border-radius: 50px;
+     font-weight: 700;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     transition: 0.3s;
+     box-shadow: 0 5px 20px rgba(207, 168, 99, 0.3);
+ }
+
+ .btn-write-review:hover {
+     background: #fff;
+     color: var(--primary-color);
+     transform: translateY(-3px);
+ }
+
+ /* --- Modal Styling --- */
+ .modal-content {
+     border-radius: 20px;
+     border: none;
+     overflow: hidden;
+ }
+
+ .modal-header {
+     background: var(--primary-color);
+     color: #fff;
+     border-bottom: none;
+ }
+
+ .modal-header .btn-close {
+     filter: invert(1);
+ }
+
+ .form-control,
+ .form-select {
+     border: 2px solid #eee;
+     padding: 12px;
+     border-radius: 10px;
+ }
+
+ .form-control:focus,
+ .form-select:focus {
+     border-color: var(--secondary-color);
+     box-shadow: none;
+ }
+
+ /* Star Rating Input */
+ .rating-input-wrapper i {
+     cursor: pointer;
+     font-size: 1.8rem;
+     color: #ddd;
+     transition: 0.2s;
+ }
+
+ .rating-input-wrapper i.active,
+ .rating-input-wrapper i:hover {
+     color: #ffc107;
+     transform: scale(1.2);
+ }
